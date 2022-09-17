@@ -4,4 +4,18 @@
 body {background:tan;}
 
 
+a:link, a:visited {
+  background-color: tan;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration:none;
+  display:inline-block;
+}
+
+a:hover, a:active {
+    background:whitesmoke;
+    color:black;
+}
+
 
