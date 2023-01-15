@@ -25,18 +25,20 @@
 
 JA: Projektbeskrivelse, hvilket videnskabeligt spørgsmål vil I godt have svar på.
 JA:Beskrivelse af hvilke sensorer I vil bruge og hvad I vil måle med dem.
+JA: Et Rutediagram/Flowchart af jeres programkode.
 
 NEJ: Gennegang af ESAs specifikationer og en vurdering af hvilke rammer det sætter for jeres projekt.
 NEJ: Grundig beskrivelse af testmåling af mindst en sensor.
 NEJ: Gennemgang af relevante kodestumper.
 NEJ: En vedhæftet fil med jeres programkode.
 NEJ: Vurdering af om jeres kode lever op til ESAs kravspecifikationer.
-NEJ: Et Rutediagram/Flowchart af jeres programkode.
+
 -->
     
     
-
-   <h3>Projektbeskrivelse</h3>
+<div style="padding-left:16px">
+   <h2>Projektbeskrivelse</h2>
+    
 <p>
     I vores projekt til ESAs Mission Space Lab's udfordring, ville vi gerne undersøge albedoen over hhv. havet og landjorden og herefter vurdere hvilken, der er højest. Dette er relevant i forhold til global opvarming, hvor verdenshavene forventes at stige, og en større del af jorden således dækkes af vand.
 <br>
@@ -45,10 +47,12 @@ NEJ: Et Rutediagram/Flowchart af jeres programkode.
     Vi forventer, at vores målinger vil vise, at albedoen over havet er højere end over jorden, og at havet derfor reflekterer mere lys/energi/varme.
 <br>    
 <br>    
-    Da det ikke er muligt at måle albedoen direkte med en af ESA's sensorer, vil vi undersøge lysindfaldet på billeder over hhv. havet og jorden, taget med ESA's kamera, der peger mod jorden. Disse opservationer vil senere danne udgangspunkt for vores konklusion. For at billederne bliver taget over hhv. havet og landjorden, har vi specificeret koordinater for hhv. en del af det nordlige Afrika og en del af det Sydlige Atlanterhav. Vi har vurderet, at disse områder er så store, at sandsynligheden for at rumstationen passerede henover var nogenlunde. Dog ville vi have udarbejdet en mere komplet oversigt over land- og havområder, hvis vi havde arbejdet videre med projektet, så vi ikke kunne risikere at ende uden data, hvis rumstationen ikke kom over Nordafrika eller det Sydlige Atlanterhav.
+    Da det ikke er muligt at måle albedoen direkte med en af ESA's sensorer, vil vi undersøge lysindfaldet på billeder over hhv. havet og jorden, taget med ESA's kamera, der peger mod jorden. Disse opservationer vil senere danne udgangspunkt for vores konklusion. For at billederne bliver taget over hhv. havet og landjorden, har vi specificeret koordinater for hhv. en del af det nordlige Afrika og en del af det Sydlige Atlanterhav. Vi har vurderet, at disse områder er så store, at sandsynligheden for at rumstationen ville passere henover var nogenlunde. Dog ville vi have udarbejdet en mere komplet oversigt over land- og havområder, hvis vi havde arbejdet videre med projektet, så vi ikke ville risikere at ende uden data, hvis rumstationen ikke kom over Nordafrika eller det Sydlige Atlanterhav.
+    </p>
     
- <br>
- <br>
+<h3>Kodestumper</h3>
+<p>
+    
     Vi har specificeret vores koordinater, hvorfra vi ønsker billeder, vha. følgende to kodestumper:
  <br>
     <img src="astropi_over_hav.png" alt="overhav" width="1000">
@@ -63,11 +67,25 @@ NEJ: Et Rutediagram/Flowchart af jeres programkode.
     
     <br>
     </p>
-  
+    
+<h3>Flowchart</h3>    
+<p>
+    Vi har valgt at opdele vores flowchart i to dele, så det illusterer hhv. vores overordnede loop med tiden, hvor der "bare" tages et billede og vores loop, som viser processen, hvor der kun tages et billede, hvis sensoren er over hav eller landjord.
+    <br>
+    Da vi udarbejdede flowcharts'ne inden projektet var kodet færdig, skal "by" erstattes med landjord og "skov" med hav. 
+    <br>
+    <img src="astropi_flowchart.jpg" alt="overhav" width="600">
+
+    
+    
+    
+    </p>    
+    
+    
+  </div>
     
 <center>
     <a href="index.html"> Tibage til portfolio </a> 
         </center>
-    
     </body>
 </html>
