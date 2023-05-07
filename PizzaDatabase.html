@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+<body>
+<h1>Vælg dine pizzatoppings</h1>
+<p id="overskrift"></p>
+<img id="billede" src="Pizza.jpg"style="width: 50%;">
+<p id="beskrivelse"></p>
+
+<button type="button" onclick="ny()">ny</button>
+<button type="button" onclick="valgte()">vælg</button>
+<p id="valg"></p>
+
+
+</body>
+</html>
+
+<script>
+  let x=0;
+  let listeMedValgte = [];
+  let data;
+  var overskrift = null
+  var beskrivelse = null
+  var billede = null
+
+function ny() {
+  var pic;
+x++
+console.log(data);
+  genererTekst(x);
+  document.getElementById('overskrift').innerHTML = overskrift;
+  document.getElementById('beskrivelse').innerHTML = beskrivelse;
+  document.getElementById('billede').src = billede;
+}
+
+function valgte(){
+  console.log(x);
+  listeMedValgte.push(overskrift)
+  document.getElementById('valg').innerHTML = listeMedValgte;
+}
+
+function genererTekst(x){
+  for (var i = 0; i < data.length; i++) {
+      console.log(i);
+      if (data[i]["id"] == x) {
+        overskrift = data[i]['overskrift']; 
+        beskrivelse = data[i]['beskrivelse'];
+        billede = data[i]['billede']
+        break; // exit efter loop
+      }
+    }
+}
+window.onload = function() {
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "Pizza.csv", true);
+xhr.responseType = "text";
+xhr.onload = function() {
+  data = Papa.parse(xhr.responseText, {
+    header: true // set this to true if the first row contains the header names
+  }).data;
+};
+xhr.send();
+}
+</script>

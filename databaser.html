@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="myStyle3.css">
+<title>Databaser</title>
+</head>
+
+    
+<body>
+<div class="topnav">
+  <a href="index.html">Portfolio</a>
+  <a href="hjemmeside1.html">Cookieopskrift</a>
+  <a href="itsikkerhed.html">IT-sikkerhed</a>
+  <a href="AstroPi.html">AstroPi</a>
+  <a href="SpilLegSamarbejde.html">Spil, Leg og Samarbejde</a>
+    <a class="active" href="databaser.html">Databaser</a>
+</div>
+
+<center>
+    <h1>Databaser</h1>
+    </center>
+    
+    <div style="padding-left:50px"> 
+       
+       
+        <br>
+
+<h2>Eksempel på database med stoffer</h2>
+    <p> Her er et eksempel på et E/R-diagram for en database, som ejes af et lager, der opbevarer stoffer, og som derfor har en database over deres lager (stoffer), deres leverandører og deres kunder.
+        <br>
+        Som man kan se, er forholdene mellem de forskellige databaser illustreret, så man kan se at der er et "mange til mange"-relation mellem leverandørerne og stofferne, da en leverandør kan levere flere stoffer, men et enkelt stof også kan leveres af flere leverandører. I databasen med leverandørerne er entiteten leverandøren, og hvilke stoffer personen leverer er atributter.
+        
+        
+ <center><img src="Database_stoffer_billede.png" width=40%>
+     </center>
+        </p>
+       
+ 
+        
+        
+<h2>Vores egen database</h2>
+        
+    <p>
+            I vores projekt har vi valgt at lave en hjemmeside hvor man kan bygge sin egen pizza. Ideen går ud på at du starter ud med en basics pizza til 50 kr, hvorefter du kan bygge mere på, ved at vælge forskellige ingredienser. 
+            <br>
+            Se vores hjemmeside her:
+                <center> <a href="PizzaDatabase.html">Pizzaingredienser</a> </center>
+        <br>
+        </p>
+            
+        <h3>Knapper</h3>
+        <p>
+            Vi har valgt at opbygge vores hjemmeside ved at tage udgangspunkt i to knapper: “ny” og “vælg”. Ny-knappen giver en mulighed for hele tiden at få en ny ingrediens som kommer i en bestemt rækkefølge. Man bruger så vælg-knappen for at vælge de ingredienser man gerne vil have på sin pizza, og så gemmer den de forskellige ingredienser nedenunder, så man kan få et overblik over ens valg. Knapperne fungerer således, at når der klikkes på en, vil den funktion, som står i javascript-delen og som matcher navnet, køres.
+            <br>
+            Koderne for knapperne i html ser således ud:
+            <center><img src="pizzaknapper.jpg" width=30%></center>
+            <br>
+            Hvis man eksempelvis klikker på knappen “ny”, vil funktionen ny( ) køres.
+        </p>
+       
+            <h3>Funktioner</h3>
+        <p>
+            Som beskrevet ovenfor aktiveres funktionen, når der klikkes på knappen. I eksemplet med knappen “ny” vil følgende kode køres i javascript:
+            <center><img src="pizzadatabasefunktionny.jpg" width=30%></center>
+            <br>
+            Vi tager udgangspunkt i eksemplet, hvor overskriften hentes i databasen med getElementById og udskrives i body'en i html-delen.
+            <br>
+            “getElementById” benytter primærnøglen i vores database, som vi også har navngivet “id”. Vi har oprettet den som en variabel x, som vi har sat til at starte som 0 i starten af vores javascript-del. I koden ses det således i linje 31, at teksten der passer til x genereres. Primærnøglen er koblet op på en en entitet, som i dette tilfælde er “overskrift”. Overskriften varierer således alt efter hvilken primærnøgle der spørges efter og kan derfor være “friske tomater”, “artiskok” eller noget tredje. Til entiteten “overskrift” hører atributterne “beskrivelse” og “billede” og ved eksemplet med primærnøgle “10” vil entiteten være “friske tomater” og atributterne vil være “5kr” og et billede af tomater og tilsvarende for de andre entiteter eller “overskrifter”. Herunder ses et billede af vores database i CSV:
+            <br>
+            <center><img src="pizzaCSVdatabasekode.png" width=25%> </center>
+            <br>
+            “getElementById” kæder således html-delens “overskrift” og databasens “overskrift” sammen.
+            <br>
+            Funktionen genererTekst:
+            <center><img src="pizzadatabasefunktiongenerertekst.jpg" width=25%> </center>
+                        
+            <br>
+            I linje 44 laves et loop, hvor det beskrives, at i starter som nul og så længe i er mindre end datalængden (som i vores database er 13), vil funktionen lægge en til i, og i vil således blive en højere hver gang funktionen aktiveres idet nogen trykker på knappen, da funktionen genererTekst indgår i funktionen ny. I linje 46 beskrives at hvis betingelsen (at primærnøglen, id, er lig x) er opfyldt, vil den hente hhv. overskrift, beskrivelse og billede fra dataen (altså vores database), som matcher primærnøglen i, og indsætte i html-body'en under overskrift, beskrivelse eller billede. Herefter vil loop'et breake (linje 50) indtil den igen aktiveres i funktionen ny, som aktiveres hvis der klikkes på knappen ny.
+            
+        </p>
+            
+            
+            <h3>Brugervenlighed</h3>
+        <p>
+            
+            Ved at lave vores hjemmeside således har vi gjort det nemt og overskueligt og for brugerne og vores side er derfor meget brugervenligt.
+            
+        
+        <br>
+            Vi har lavet en database, hvor vi har vores primære nøgle “id”, hvor vi så har ud for hver id en overskrift, beskrivelse og billede af produktet. 
+        
+        </p>
+
+        
+              </div> 
+        
+<center>
+     <a href="index.html"> Tibage til portfolio </a> 
+        </center>
+    </body>
+</html>
